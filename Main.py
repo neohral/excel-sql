@@ -62,4 +62,4 @@ for row in ws.iter_rows():
 for rec in recList:
     headerStr = f'INSERT INTO {tableName} ({','.join(colList)}) VALUES ('
     record = f'{headerStr}{','.join(rec)});'
-    print(record)
+    f.write(record+'\n')
